@@ -22,7 +22,7 @@ import org.slf4j.Logger;
 public class PropulsionMixinPlugin implements IMixinConfigPlugin {
     private static final Logger LOGGER = LogUtils.getLogger();
     private static final Map<String, Supplier<Boolean>> CONDITIONS = new HashMap<>();
-    private static final boolean LOG_MIXINS = false;
+    private static final boolean LOG_MIXINS = true;
 
     static {
         CONDITIONS.put("is_vsaddition_not_loaded", () -> FMLLoader.getLoadingModList().getModFileById("vs_addition") == null);
